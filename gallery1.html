@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assuming your CSS is named 'styles.css' -->
+    <style>
+        /* Additional styling for the gallery page */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5em;
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="images/image1.jpg" alt="Gallery image 1">
+            <div class="overlay">Image 1</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/image2.jpg" alt="Gallery image 2">
+            <div class="overlay">Image 2</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/image3.jpg" alt="Gallery image 3">
+            <div class="overlay">Image 3</div>
+        </div>
+        <!-- Add more images as needed -->
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Photographer's Portfolio</p>
+    </footer>
+</body>
+</html>
