@@ -1,0 +1,106 @@
+
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+}
+
+header {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+main {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Gallery Thumbnail Styling */
+.gallery-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-thumbnails a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-thumbnails a:hover {
+    transform: scale(1.05);
+}
+
+.gallery-thumbnails img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Masonry Gallery Styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* About Page Styles */
+img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        display: block;
+        text-align: left;
+    }
+    header nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .gallery-thumbnails {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+    
